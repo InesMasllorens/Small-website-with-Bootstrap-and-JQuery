@@ -22,9 +22,11 @@
                     txt = "";
                     $.each(data, function(index,info) {
                             $("#MisRepos tbody").append(
-                            txt = txt + '<tr><td>' + JSON.stringify(info.name)+
-                            '</td><td>' + JSON.stringify(info.description)+
-                            '</td><td>' + JSON.stringify(info.stargazers_count)+
+                            txt = txt + '<tr><td>' + info.name+
+                            '</td><td>' + info.id+
+                            '</td><td>' + info.description+
+                            '</td><td>' + info.stargazers_count+
+                            '</td><td>' + info.language +
                             '</td></tr>'
                     );
                     });
@@ -54,8 +56,10 @@
         <thead>
         <tr>
             <th>Name</th>
+            <th>ID</th>
             <th>Description</th>
             <th>Followers</th>
+            <th>Language</th>
         </tr>
         </thead>
         <tbody>
